@@ -95,10 +95,6 @@ resource "aws_instance" "myapp-server-1" {
 
     user_data = file("entry-script.sh")
 
-    provisioner "local-exec" {
-        command = "echo ${self.public_ip} > public_ip.txt"
-    }
-
     tags = {
         Name: "${var.env_prefix}-server"
     }
@@ -134,10 +130,6 @@ resource "aws_instance" "myapp-server-3" {
     key_name = aws_key_pair.ssh-key.key_name
 
     user_data = file("entry-script.sh")
-
-    provisioner "local-exec" {
-        command = "echo ${self.public_ip} > public_ip.txt"
-    }
 
     tags = {
         Name: "${var.env_prefix}-server"
