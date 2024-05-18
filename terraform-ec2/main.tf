@@ -78,13 +78,12 @@ resource "aws_default_security_group" "myapp-default-sg" {
 }
 
 resource "aws_key_pair" "ssh-key" {
-    key_name = "demo2"
+    key_name = "<your-key-name>"
     public_key = file(var.public_key_location)
 }
 
 resource "aws_instance" "myapp-server-1" {
-    # ami = data.aws_ami.latest-amazon-linux-image.id
-    ami = "ami-09298640a92b2d12c"
+    ami = data.aws_ami.latest-amazon-linux-image.id
     instance_type = var.instance_type
 
     subnet_id = aws_subnet.myapp-subnet-1.id
@@ -106,8 +105,7 @@ resource "aws_instance" "myapp-server-1" {
 }
 
 resource "aws_instance" "myapp-server-2" {
-    # ami = data.aws_ami.latest-amazon-linux-image.id
-    ami = "ami-09298640a92b2d12c"
+    ami = data.aws_ami.latest-amazon-linux-image.id
     instance_type = var.instance_type
 
     subnet_id = aws_subnet.myapp-subnet-1.id
@@ -125,8 +123,7 @@ resource "aws_instance" "myapp-server-2" {
 }
 
 resource "aws_instance" "myapp-server-3" {
-    # ami = data.aws_ami.latest-amazon-linux-image.id
-    ami = "ami-09298640a92b2d12c"
+    ami = data.aws_ami.latest-amazon-linux-image.id
     instance_type = var.instance_type
 
     subnet_id = aws_subnet.myapp-subnet-1.id
