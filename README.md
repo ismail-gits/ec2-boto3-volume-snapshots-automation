@@ -23,15 +23,15 @@ This project comprises three automation scripts using Terraform and Python to ma
 
 ## Usage
 
-### Snapshot Creation and Cleanup Automation
-- Ensure you have Python and Boto3 installed.
-- Update AWS credentials in your environment or configure them using AWS CLI.
-- Run `python main.py` in the respective directories to execute the automation scripts.
-
 ### Terraform EC2 Provisioning
 - Install Terraform on your local machine.
 - Update the `terraform.tfvars` file with your desired configurations.
 - Run `terraform init`, `terraform plan`, and `terraform apply` in the `terraform-ec2` directory to provision the infrastructure.
+
+### Snapshot Creation and Cleanup Automation
+- Ensure you have Python and Boto3 installed.
+- Update AWS credentials in your environment or configure them using AWS CLI.
+- Run `python main.py` in the respective directories to execute the automation scripts.
 
 ## Note
 - Ensure proper AWS IAM permissions are set for the user executing these scripts.
